@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Outfit';
+            background: linear-gradient(#ffdad5,#fff7f9);
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            /* padding: 80px; */
+        }
+        .contactform{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        .contentleft h2{
+            font-weight: 600;
+            color: #a363aa;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .contentleft hr{
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: #a363aa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .input{
+            width: 400px;
+            height: 50px;
+            gap: 20px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 50px;
+        } 
+         .inputm{
+            height: 140px;
+            width: 400px;
+            padding-top: 15px;
+            padding-left: 20px;
+            border-radius: 20px;
+            border: none;
+            /* border: solid 1px orange; */
+
+        }
+        .inputm:focus{
+            border: 2px solid orange;
+        }
+        .input:focus{
+            border: 2px solid orange;
+        }
+        .click{
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            gap: 10px;
+            border:none;
+            border-radius:50px;
+            background: linear-gradient(270deg,orange,#fa6d86);
+            cursor: pointer;
+        }
+        .click img{
+            height: 15px;
+        }
+        .contactright img{
+            width: 500px;
+
+        }
+        @media (max-width:800px) {
+            .input{
+                width: 80vw;
+            }
+            .contactright{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="contactform">
+            <div class="contentleft">
+                <h2>Get in Touch</h2>
+                <hr>
+            </div>
+            <input type="text" name="name" placeholder="Your Name" class="input" required>
+            <input type="email" name="email" placeholder="Your Email" class="input" required>
+            <textarea name="message" placeholder="Your Message" class="inputm"></textarea >
+            <button type="submit" class="click"> Submit <img src="assests/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contactright">
+            <img src="assests/right_img.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
